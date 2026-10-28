@@ -15,7 +15,7 @@
 /* ======================= CONFIGURAÇÃO ======================= */
 window.SPUMA = {
   PIXEL_ID: '1608967560405738', // Pixel do Meta (PIXEL 01 - lp.spumaacademy)
-  CHECKOUT: 'https://payfast.greenn.com.br/187311/offer/Fqoagd?ch_id=139468',
+  CHECKOUT: 'https://payfast.greenn.com.br/187311/offer/Fqoagd?ch_id=139468&b_id_1=200573&b_offer_1=XbL60I&b_id_2=199751&b_offer_2=MuByed&b_id_3=200576&b_offer_3=MjGD7R&b_id_4=199766&b_offer_4=nOXKlD',
   REVELAR_EM: 756,              // segundo do vídeo em que a oferta aparece (12:36, quando o preço é dito)
   VALOR: 290.83, MOEDA: 'BRL'
 };
@@ -167,7 +167,7 @@ footer a{color:var(--mut)}
   document.querySelectorAll('a.cta').forEach(function(a){
     a.href = link.toString();
     a.addEventListener('click', function(){
-      px('track','InitiateCheckout',{value:C.VALOR, currency:C.MOEDA, content_name:'Método Spuma PRO', content_category: a.dataset.local});
+      px('trackCustom','CliqueComprar',{value:C.VALOR, currency:C.MOEDA, content_name:'Método Spuma PRO', local: a.dataset.local});
     });
   });
   /* --- mostrar oferta --- */
