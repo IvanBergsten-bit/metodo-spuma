@@ -182,8 +182,15 @@ footer a{color:var(--mut)}
   /* --- mostrar oferta --- */
   function revelar(origem){
     if(revelado) return; revelado = true;
-    document.getElementById('oferta-bloco').classList.remove('esconder');
-    document.getElementById('fixo').classList.remove('esconder');
+    /* a VTurb esconde os elementos .vt-oferta com estilo inline !important; por isso reaplica por alguns segundos */
+    function mostrar(){
+      var b = document.getElementById('oferta-bloco'), f = document.getElementById('fixo');
+      b.classList.remove('esconder'); f.classList.remove('esconder');
+      b.style.setProperty('display','block','important');
+      if(window.matchMedia('(max-width:759px)').matches) f.style.setProperty('display','block','important');
+      else f.style.setProperty('display','none','important');
+    }
+    mostrar(); var k = 0, r = setInterval(function(){ mostrar(); if(++k > 30) clearInterval(r); }, 500);
     try{ localStorage.setItem('spuma_oferta','1'); }catch(e){}
     if(origem==='video') px('trackCustom','ViuOferta',{segundo:C.REVELAR_EM});
   }
