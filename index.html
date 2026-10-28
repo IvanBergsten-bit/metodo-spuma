@@ -14,7 +14,7 @@
 <script>
 /* ======================= CONFIGURAÇÃO ======================= */
 window.SPUMA = {
-  PIXEL_ID: '',                 // ID do Pixel do Meta (ex.: '123456789012345')
+  PIXEL_ID: '1608967560405738', // Pixel do Meta (PIXEL 01 - lp.spumaacademy)
   CHECKOUT: 'https://payfast.greenn.com.br/187311/offer/Fqoagd?ch_id=139468',
   REVELAR_EM: 756,              // segundo do vídeo em que a oferta aparece (12:36, quando o preço é dito)
   VALOR: 290.83, MOEDA: 'BRL'
@@ -180,12 +180,11 @@ footer a{color:var(--mut)}
   }
   try{ if(localStorage.getItem('spuma_oferta')==='1') revelar('retorno'); }catch(e){}
   if(qs.get('oferta')==='1') revelar('link');
-  /* --- progresso do vídeo VTurb (25/50/75/95%) --- */
-  var marcos = {25:false,50:false,75:false,95:false}, iniciou = false;
+  /* --- vídeo VTurb: play e momento da oferta (o % assistido é enviado pela própria VTurb) --- */
+  var iniciou = false;
   function tempo(seg, dur){
     if(!iniciou && seg > 1){ iniciou = true; px('trackCustom','VideoPlay'); }
     if(seg >= C.REVELAR_EM) revelar('video');
-    if(dur){ var p = seg/dur*100; Object.keys(marcos).forEach(function(m){ if(!marcos[m] && p >= +m){ marcos[m] = true; px('trackCustom','Video'+m); } }); }
   }
   function ligar(){
     var pl = document.querySelector('vturb-smartplayer');
