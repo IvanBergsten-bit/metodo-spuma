@@ -290,7 +290,7 @@ footer p+p{margin-top:6px}
         try{ pl.displayHiddenElements(C.REVELAR_EM, ['.vt-oferta'], {persist:true}); }catch(e){}
       });
       setInterval(function(){
-        try{ var v = pl.video || (pl.shadowRoot && pl.shadowRoot.querySelector('video')); if(v) tempo(v.currentTime, v.duration); }catch(e){}
+        try{ var sp = window.smartplayer && smartplayer.instances && smartplayer.instances[0]; var v = (sp && sp.video && typeof sp.video.currentTime === 'number') ? sp.video : (pl.video || (pl.shadowRoot && pl.shadowRoot.querySelector('video'))); if(v) tempo(v.currentTime, v.duration); }catch(e){}
       }, 1000);
       return true;
     }
