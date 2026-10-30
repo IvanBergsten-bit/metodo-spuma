@@ -108,7 +108,7 @@ a{color:inherit}
 .inclui svg{width:22px;height:22px;margin-top:1px;color:var(--azul)}
 .preco{margin:26px 0 4px;font-size:16px;color:var(--tinta2)}
 .preco strong{display:block;color:var(--tinta);font-variation-settings:'wdth' 75;font-weight:900;font-size:clamp(52px,13vw,72px);line-height:1;letter-spacing:-.03em}
-.vista{color:var(--tinta2);font-size:16px;margin-bottom:22px}
+.vista{color:var(--tinta);font-size:19px;font-weight:700;margin-bottom:22px}
 .btn{display:block;width:100%;text-align:center;text-decoration:none;background:var(--azul);color:#fff;border-radius:14px;padding:20px 18px;
   font-variation-settings:'wdth' 90;font-weight:800;font-size:19px;letter-spacing:.005em;box-shadow:0 14px 30px -12px rgba(0,20,173,.7);transition:background .15s, transform .15s}
 .btn:hover{background:var(--azul2)} .btn:active{transform:translateY(1px)}
@@ -136,6 +136,7 @@ footer p+p{margin-top:6px}
 
 .fixo{position:fixed;left:0;right:0;bottom:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(243,245,250,.94);backdrop-filter:blur(10px);border-top:1px solid var(--linha);z-index:9}
 .fixo .btn{max-width:520px;margin:0 auto;padding:16px;font-size:17px}
+.fixo-preco{max-width:520px;margin:0 auto 8px;text-align:center;font-size:15px;font-weight:700;color:var(--tinta)}
 @media(min-width:760px){.fixo{display:none!important}}
 </style>
 </head>
@@ -238,7 +239,7 @@ footer p+p{margin-top:6px}
   </section>
 </main>
 
-<div class="fixo esconder vt-oferta" id="fixo"><a class="btn cta" href="#" data-local="barra">Quero o Método Spuma PRO</a></div>
+<div class="fixo esconder vt-oferta" id="fixo"><p class="fixo-preco">12x de R$ 29,90 ou R$ 290,83 à vista</p><a class="btn cta" href="#" data-local="barra">Quero o Método Spuma PRO</a></div>
 <footer class="wrap">
   <p>Spuma Academy. Todos os direitos reservados.</p>
   <p><a href="privacidade.html">Política de privacidade</a> e <a href="termos.html">Termos de uso</a></p>
