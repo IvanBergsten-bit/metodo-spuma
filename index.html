@@ -11,9 +11,8 @@
 <link rel="icon" href="img/logo.png">
 <!-- VTurb: carregamento rápido -->
 <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
-<link rel="preload" href="https://scripts.converteai.net/490fcde4-35cc-4dee-9340-3aa502da3ba2/players/6ae1f6f8b9127d4be182358b/v4/player.js" as="script">
+<link rel="preload" href="https://scripts.converteai.net/490fcde4-35cc-4dee-9340-3aa502da3ba2/ab-test/6ae4fdbc135e42c5e6d3bf2c/player.js" as="script">
 <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
-<link rel="preload" href="https://cdn.converteai.net/490fcde4-35cc-4dee-9340-3aa502da3ba2/6ae1f6c81a888f6107f558cc/main.m3u8" as="fetch">
 <link rel="dns-prefetch" href="https://cdn.converteai.net">
 <link rel="dns-prefetch" href="https://scripts.converteai.net">
 <link rel="dns-prefetch" href="https://images.converteai.net">
@@ -151,8 +150,8 @@ footer p+p{margin-top:6px}
     <h1 class="sr">Toda mancha sai. Entenda por quê.</h1>
     <p class="intro">Assista até o fim: o passo a passo do método aparece na parte final da aula.</p>
     <div class="tela" id="video">
-      <vturb-smartplayer id="vid-6ae1f6f8b9127d4be182358b" style="display: block; margin: 0 auto; width: 100%; max-width: 420px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
-      <script type="text/javascript">var s=document.createElement("script"); s.src="https://scripts.converteai.net/490fcde4-35cc-4dee-9340-3aa502da3ba2/players/6ae1f6f8b9127d4be182358b/v4/player.js", s.async=!0,document.head.appendChild(s);</script>
+      <vturb-smartplayer id="ab-6ae4fdbc135e42c5e6d3bf2c" style="display: block; margin: 0 auto; width: 100%; max-width: 420px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
+      <script type="text/javascript">var s=document.createElement("script"); s.src="https://scripts.converteai.net/490fcde4-35cc-4dee-9340-3aa502da3ba2/ab-test/6ae4fdbc135e42c5e6d3bf2c/player.js", s.async=!0,document.head.appendChild(s);</script>
     </div>
     <p class="som"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/></svg>Confira se o som do celular está ligado.</p>
   </section>
@@ -275,7 +274,7 @@ footer p+p{margin-top:6px}
     if(origem==='video') px('trackCustom','ViuOferta',{segundo:C.REVELAR_EM});
   }
   /* teste: ?reset=1 apaga a memória de "já viu a oferta" neste navegador */
-  if(qs.get('reset')==='1'){ try{ Object.keys(localStorage).forEach(function(k){ if(k==='spuma_oferta' || k.indexOf('6ae1f6f8b9127d4be182358b')>-1 || /vturb|smartplayer|converteai/i.test(k)) localStorage.removeItem(k); }); }catch(e){} }
+  if(qs.get('reset')==='1'){ try{ Object.keys(localStorage).forEach(function(k){ if(k==='spuma_oferta' || k.indexOf('6ae1f6f8b9127d4be182358b')>-1 || k.indexOf('6ae4fdbc135e42c5e6d3bf2c')>-1 || /vturb|smartplayer|converteai/i.test(k)) localStorage.removeItem(k); }); }catch(e){} }
   try{ if(localStorage.getItem('spuma_oferta')==='1') revelar('retorno'); }catch(e){}
   if(qs.get('oferta')==='1') revelar('link');
   /* --- vídeo VTurb: play e momento da oferta (o % assistido é enviado pela própria VTurb) --- */
