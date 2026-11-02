@@ -146,9 +146,19 @@ footer p+p{margin-top:6px}
 .fixo .btn{max-width:520px;margin:0 auto;padding:15px;font-size:14px}
 .fixo-preco{max-width:520px;margin:0 auto 8px;text-align:center;font-size:14px;font-weight:600}
 @media(min-width:760px){.fixo{display:none!important}}
+.barra{background:var(--navy);color:#fff;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.12em}
+.barra .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 22px;padding-block:9px}
+.barra span{display:inline-flex;align-items:center;gap:8px}
+.barra span:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--magenta)}
+.numeros{background:var(--navy);color:#fff}
+.numeros .wrap{display:grid;gap:28px;padding-block:clamp(40px,7vw,64px);text-align:center}
+@media(min-width:760px){.numeros .wrap{grid-template-columns:repeat(3,1fr)}}
+.numeros b{display:block;font-size:clamp(36px,7vw,52px);font-weight:700;letter-spacing:-.03em;line-height:1;background-image:linear-gradient(135deg,var(--magenta),var(--laranja));-webkit-background-clip:text;background-clip:text;color:transparent}
+.numeros p{margin-top:10px;font-size:14px;color:rgba(255,255,255,.75);max-width:280px;margin-left:auto;margin-right:auto}
 </style>
 </head>
 <body>
+<div class="barra"><div class="wrap"><span>Aula gratuita</span><span>Para hotéis, pousadas e lavanderias</span><span>Assista até o fim</span></div></div>
 <header class="topo">
   <div class="wrap">
     <a href="https://spumaacademy.com.br" aria-label="Spuma Academy"><img src="img/logo-horizontal.png" alt="Spuma Academy" width="135" height="46"></a>
@@ -172,6 +182,15 @@ footer p+p{margin-top:6px}
       <ul class="chips" aria-label="Manchas abordadas">
         <li>Protetor solar</li><li>Maquiagem</li><li>Sangue</li><li>Mofo</li><li>Ferrugem</li><li>Clorexidina</li><li>Gordura</li><li>Amarelado</li>
       </ul>
+    </div>
+  </section>
+
+
+  <section class="numeros" aria-label="Resultados do método">
+    <div class="wrap">
+      <div><b>97%</b><p>de recuperação média de enxoval nos clientes que aplicaram o processo</p></div>
+      <div><b>R$ 33 mil</b><p>em enxoval guardado recuperado em menos de 1 dia num hotel em Morro de São Paulo</p></div>
+      <div><b>+200</b><p>alunos em todo o Brasil treinando as próprias equipes</p></div>
     </div>
   </section>
 
