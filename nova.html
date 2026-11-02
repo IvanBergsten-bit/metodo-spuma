@@ -155,6 +155,22 @@ footer p+p{margin-top:6px}
 @media(min-width:760px){.numeros .wrap{grid-template-columns:repeat(3,1fr)}}
 .numeros b{display:block;font-size:clamp(36px,7vw,52px);font-weight:700;letter-spacing:-.03em;line-height:1;background-image:linear-gradient(135deg,var(--magenta),var(--laranja));-webkit-background-clip:text;background-clip:text;color:transparent}
 .numeros p{margin-top:10px;font-size:14px;color:rgba(255,255,255,.75);max-width:280px;margin-left:auto;margin-right:auto}
+.planos{display:grid;gap:28px;max-width:980px;margin:0 auto;align-items:stretch}
+@media(min-width:820px){.planos{grid-template-columns:1fr 1fr}}
+.plano{position:relative;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--linha);border-radius:28px;padding:36px 26px 28px;box-shadow:var(--sombra)}
+.plano.destaque{border:2px solid var(--magenta);box-shadow:0 0 40px -10px rgba(238,44,158,.4)}
+.plano .inclui{flex:1}
+.plano h3{margin-top:8px;font-size:clamp(20px,3.6vw,24px);font-weight:600;text-transform:uppercase;line-height:1.15}
+.tipo{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.18em;color:var(--magenta)}
+.tipo.cinza{color:var(--texto)} .tipo.laranja{color:var(--laranja)}
+.sub{margin-top:10px;color:var(--texto);font-size:15px}
+.sub.forte{color:var(--navy);font-weight:600}
+.bonus{margin-top:20px;border:1px solid rgba(245,138,46,.4);background:rgba(245,138,46,.05);border-radius:18px;padding:16px}
+.bonus p+p{margin-top:6px;font-size:14px}
+.btn-out{background:transparent;color:var(--navy);border:2px solid var(--navy);box-shadow:none}
+.btn-out:hover{background:var(--navy);color:#fff;filter:none}
+.planos + .seguro{margin-top:28px}
+.link-ofertas{display:inline-block;margin-top:22px;color:#fff;font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:.1em;border-bottom:1px solid rgba(255,255,255,.4);text-decoration:none;padding-bottom:4px}
 </style>
 </head>
 <body>
@@ -162,7 +178,7 @@ footer p+p{margin-top:6px}
 <header class="topo">
   <div class="wrap">
     <a href="https://spumaacademy.com.br" aria-label="Spuma Academy"><img src="img/logo-horizontal.png" alt="Spuma Academy" width="135" height="46"></a>
-    <span class="pill">Método Spuma PRO</span>
+    <a class="pill" href="#ofertas">Ver opções</a>
   </div>
 </header>
 
@@ -193,64 +209,6 @@ footer p+p{margin-top:6px}
       <div><b>+200</b><p>alunos em todo o Brasil treinando as próprias equipes</p></div>
     </div>
   </section>
-
-  <!-- OFERTA: aparece quando o vídeo chega no preço (12:35) -->
-  <div class="esconder vt-oferta" id="oferta-bloco">
-    <section class="sec muted" id="oferta" aria-labelledby="titulo-oferta">
-      <div class="wrap">
-        <div class="oferta">
-          <span class="selo">Liberado para você que assistiu à aula</span>
-          <p class="tipo">Treinamento completo</p>
-          <h2 id="titulo-oferta">Método Spuma PRO</h2>
-          <p class="sub">Tratamento profissional de manchas para enxoval de hotel, pousada, hospital e lavanderia.</p>
-          <ul class="inclui">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>O Método Spuma PRO completo, passo a passo</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Produto, dosagem, temperatura e tempo para cada caso</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Bônus: Biblioteca de Manchas</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>12 meses de acesso e certificado</li>
-          </ul>
-          <div class="precobox">
-            <p class="preco">12x de <strong>R$ 29,90</strong></p>
-            <p class="vista">ou R$ 290,83 à vista</p>
-            <a class="btn cta" href="#" data-local="oferta">Quero o Método Spuma PRO <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <div class="seguro">
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Compra segura</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>Acesso imediato</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/></svg>Garantia de 7 + 30 dias</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="sec" aria-labelledby="titulo-garantia">
-      <div class="wrap">
-        <div class="cab"><span class="eyebrow">Garantia dupla</span><h2 class="h2" id="titulo-garantia">Você testa sem risco</h2></div>
-        <div class="garantias">
-          <div class="gar"><b>7 dias</b><h3>Garantia incondicional</h3><p>Achou que não é para você, por qualquer motivo? Peça e devolvemos todo o dinheiro.</p></div>
-          <div class="gar"><b>30 dias</b><h3>Garantia de resultado</h3><p>Assistiu às aulas, aplicou o método como ensinado e não funcionou? Mostre o que fez e devolvemos cada centavo.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="sec muted" aria-labelledby="titulo-faq">
-      <div class="wrap">
-        <div class="cab"><span class="eyebrow">Dúvidas</span><h2 class="h2" id="titulo-faq">Perguntas frequentes</h2></div>
-        <div class="faq">
-          <details><summary>Serve para a minha lavanderia?</summary><p>Serve para hotéis, pousadas, hospitais, clínicas e lavanderias comerciais e industriais. O método ensina o princípio de cada produto, então funciona com o que você já usa.</p></details>
-          <details><summary>Preciso comprar produto de alguma marca?</summary><p>Não. Você aprende o princípio ativo de cada produto e compra de quem já te atende.</p></details>
-          <details><summary>Por quanto tempo tenho acesso?</summary><p>12 meses de acesso às aulas e à Biblioteca de Manchas, com certificado para quem conclui.</p></details>
-          <details><summary>Como recebo o acesso?</summary><p>Logo depois da confirmação do pagamento, o acesso chega no seu e-mail.</p></details>
-          <details><summary>E se não funcionar?</summary><p>Você tem 7 dias de garantia incondicional e mais 30 dias de garantia de resultado.</p></details>
-        </div>
-        <div class="fim">
-          <p class="preco">12x de <strong>R$ 29,90</strong></p>
-          <p class="vista">ou R$ 290,83 à vista</p>
-          <a class="btn cta" href="#" data-local="final">Quero o Método Spuma PRO <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </div>
-    </section>
-  </div>
 
   <section class="sec" aria-labelledby="titulo-resultados">
     <div class="wrap">
@@ -283,7 +241,7 @@ footer p+p{margin-top:6px}
   <section class="sec muted" aria-labelledby="titulo-ivan">
     <div class="wrap">
       <div class="ivan">
-        <img src="img/ivan.jpg" alt="Ivan Bergstén" width="280" height="280" loading="lazy">
+        <img src="https://www.spumaacademy.com.br/assets/ivan-foto-CUFuOYUC.jpg" alt="Ivan Bergstén" width="280" height="280" loading="lazy">
         <div>
           <span class="eyebrow">Quem ensina</span>
           <h2 id="titulo-ivan">Ivan Bergstén · Spuma Academy</h2>
@@ -295,11 +253,78 @@ footer p+p{margin-top:6px}
     </div>
   </section>
 
+  <!-- OFERTAS (checkout americano): sempre visíveis -->
+  <div id="oferta-bloco">
+    <section class="sec muted" id="ofertas" aria-labelledby="titulo-oferta">
+      <div class="wrap">
+        <div class="cab">
+          <span class="eyebrow">Escolha sua opção</span>
+          <h2 class="h2" id="titulo-oferta">Quero acabar com as manchas do enxoval</h2>
+          <p class="lead">O Método Spuma PRO resolve as manchas. O Acesso Completo libera toda a plataforma da Spuma Academy, com o Método incluído, e ainda a reunião de direcionamento.</p>
+        </div>
+        <div class="planos">
+          <div class="plano">
+            <p class="tipo cinza">Opção essencial</p>
+            <h3>Método Spuma PRO</h3>
+            <p class="sub">Somente o treinamento de manchas.</p>
+            <ul class="inclui"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>O Método Spuma PRO completo, passo a passo</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Produto, dosagem, temperatura e tempo para cada caso</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Bônus: Biblioteca de Manchas</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>12 meses de acesso e certificado</li></ul>
+            <div class="precobox">
+              <p class="preco">12x de <strong>R$ 29,90</strong></p>
+              <p class="vista">ou R$ 290,83 à vista</p>
+              <a class="btn btn-out cta" href="#" data-local="oferta-pro">Quero o Método Spuma PRO <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+          <div class="plano destaque">
+            <span class="selo">★ Mais completo</span>
+            <p class="tipo">Tudo do Método PRO + a plataforma inteira</p>
+            <h3>Acesso Completo à Spuma Academy</h3>
+            <p class="sub forte">∞ Acesso vitalício</p>
+            <ul class="inclui"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Método Spuma PRO (tratamento intensivo de manchas)</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Curso de Lavanderia Profissional</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Apostilas dos cursos</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Biblioteca de tecidos, com um capítulo para cada fibra</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Tabela de cuidados com tecidos</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Tabela de manchas</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Conteúdos sobre produtos e processos</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Custos na lavanderia (com planilhas Excel)</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Treinamentos gravados e futuras atualizações</li></ul>
+            <div class="bonus"><p class="tipo laranja">Bônus · Reunião de direcionamento</p><p>Uma reunião individual com a equipe da Spuma para entender sua operação, as manchas que mais aparecem e direcionar a aplicação do conteúdo.</p></div>
+            <div class="precobox">
+              <p class="preco">12x de <strong>R$ 59,90</strong></p>
+              <p class="vista">&nbsp;</p>
+              <a class="btn cta" href="#" data-local="oferta-completo" data-href="https://payfast.greenn.com.br/j3vwqw8/offer/UJGGsQ" data-produto="Acesso Completo Spuma Academy">Quero o acesso completo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </div>
+        <div class="seguro">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Compra segura</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>Acesso imediato</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/></svg>Garantia de 7 + 30 dias</span>
+        </div>
+      </div>
+    </section>
+    <section class="sec" aria-labelledby="titulo-garantia">
+      <div class="wrap">
+        <div class="cab"><span class="eyebrow">Garantia dupla</span><h2 class="h2" id="titulo-garantia">Você testa sem risco</h2></div>
+        <div class="garantias">
+          <div class="gar"><b>7 dias</b><h3>Garantia incondicional</h3><p>Achou que não é para você, por qualquer motivo? Peça e devolvemos todo o dinheiro.</p></div>
+          <div class="gar"><b>30 dias</b><h3>Garantia de resultado</h3><p>Assistiu às aulas, aplicou o método como ensinado e não funcionou? Mostre o que fez e devolvemos cada centavo.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec muted" aria-labelledby="titulo-faq">
+      <div class="wrap">
+        <div class="cab"><span class="eyebrow">Dúvidas</span><h2 class="h2" id="titulo-faq">Perguntas frequentes</h2></div>
+        <div class="faq">
+          <details><summary>Serve para a minha lavanderia?</summary><p>Serve para hotéis, pousadas, hospitais, clínicas e lavanderias comerciais e industriais. O método ensina o princípio de cada produto, então funciona com o que você já usa.</p></details>
+          <details><summary>Preciso comprar produto de alguma marca?</summary><p>Não. Você aprende o princípio ativo de cada produto e compra de quem já te atende.</p></details>
+          <details><summary>Por quanto tempo tenho acesso?</summary><p>12 meses de acesso às aulas e à Biblioteca de Manchas, com certificado para quem conclui.</p></details>
+          <details><summary>Como recebo o acesso?</summary><p>Logo depois da confirmação do pagamento, o acesso chega no seu e-mail.</p></details>
+          <details><summary>E se não funcionar?</summary><p>Você tem 7 dias de garantia incondicional e mais 30 dias de garantia de resultado.</p></details>
+        </div>
+      </div>
+    </section>
+  </div>
+
   <section class="sec navy">
     <div class="wrap">
       <h2>A próxima mancha difícil não precisa ser uma tentativa.</h2>
       <p>Quando você entende o tipo de mancha, sabe qual produto usar, em qual concentração e por quanto tempo.</p>
       <p class="forte">Assista à aula até o fim e veja o passo a passo.</p>
+      <a class="link-ofertas" href="#ofertas">Ver as opções de acesso ↓</a>
     </div>
   </section>
 </main>
@@ -318,10 +343,13 @@ footer p+p{margin-top:6px}
   var qs = new URLSearchParams(location.search), link = new URL(C.CHECKOUT);
   ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','src','sck'].forEach(function(k){ if(qs.get(k)) link.searchParams.set(k, qs.get(k)); });
   if(!link.searchParams.get('src') && qs.get('utm_content')) link.searchParams.set('src', qs.get('utm_content'));
+  function comUtm(url){ var u = new URL(url); ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','src','sck'].forEach(function(k){ if(qs.get(k)) u.searchParams.set(k, qs.get(k)); }); if(!u.searchParams.get('src') && qs.get('utm_content')) u.searchParams.set('src', qs.get('utm_content')); return u.toString(); }
   document.querySelectorAll('a.cta').forEach(function(a){
-    a.href = link.toString();
+    var completo = !!a.dataset.href;
+    a.href = completo ? comUtm(a.dataset.href) : link.toString();
     a.addEventListener('click', function(){
-      px('trackCustom','CliqueComprar',{value:C.VALOR, currency:C.MOEDA, content_name:'Método Spuma PRO', local: a.dataset.local});
+      if(completo) px('trackCustom','CliqueComprar',{currency:C.MOEDA, content_name:a.dataset.produto, local: a.dataset.local});
+      else px('trackCustom','CliqueComprar',{value:C.VALOR, currency:C.MOEDA, content_name:'Método Spuma PRO', local: a.dataset.local});
     });
   });
   /* --- mostrar oferta --- */
