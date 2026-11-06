@@ -30,7 +30,7 @@ window.SPUMA = {
      Forçar uma variante para conferir: ?var=antiga | ?var=nova | ?var=aula                       */
   VARIANTES: {
     antiga: { player:'ab-6ae4fdbc135e42c5e6d3bf2c', script:'https://scripts.converteai.net/490fcde4-35cc-4dee-9340-3aa502da3ba2/ab-test/6ae4fdbc135e42c5e6d3bf2c/player.js', ratio:177.7778, revelar:755 },
-    nova:   { player:'', script:'', ratio:177.7778, revelar:231 },          // VSL nova (Básico x Completo): oferta em 3:51
+    nova:   { player:'vid-6aedda9f651497435eb502df', script:'https://scripts.converteai.net/490fcde4-35cc-4dee-9340-3aa502da3ba2/players/6aedda9f651497435eb502df/v4/player.js', ratio:177.7778, revelar:231 },          // VSL nova (Básico x Completo): oferta em 3:51
     aula:   { player:'', script:'', ratio:56.25, revelar:695, maxw:860,   // aula 1 Mancha x Sujeira com abertura e fechamento: oferta no início do fechamento
               eyebrow:'Aula 1 grátis · Módulo Fundamentos', h1:'Assista grátis à primeira aula <span>do Método Spuma PRO.</span>', lead:'Mancha x Sujeira: a mesma aula que os alunos assistem dentro da plataforma.' }
   }
@@ -391,7 +391,7 @@ footer p+p{margin-top:6px}
     if(origem==='video') px('trackCustom','ViuOferta',{segundo:C.REVELAR_EM, variante: C.VAR});
   }
   /* teste: ?reset=1 apaga a memória de "já viu a oferta" neste navegador */
-  if(qs.get('reset')==='1'){ try{ Object.keys(localStorage).forEach(function(k){ if(k==='spuma_oferta' || k==='spuma_var' || k.indexOf('6ae1f6f8b9127d4be182358b')>-1 || k.indexOf('6ae4fdbc135e42c5e6d3bf2c')>-1 || /vturb|smartplayer|converteai/i.test(k)) localStorage.removeItem(k); }); }catch(e){} }
+  if(qs.get('reset')==='1'){ try{ Object.keys(localStorage).forEach(function(k){ if(k==='spuma_oferta' || k==='spuma_var' || k.indexOf('6ae1f6f8b9127d4be182358b')>-1 || k.indexOf('6ae4fdbc135e42c5e6d3bf2c')>-1 || k.indexOf('6aedda9f651497435eb502df')>-1 || /vturb|smartplayer|converteai/i.test(k)) localStorage.removeItem(k); }); }catch(e){} }
   try{ if(localStorage.getItem('spuma_oferta')==='1') revelar('retorno'); }catch(e){}
   if(qs.get('oferta')==='1') revelar('link');
   /* --- vídeo VTurb: play e momento da oferta (o % assistido é enviado pela própria VTurb) --- */
