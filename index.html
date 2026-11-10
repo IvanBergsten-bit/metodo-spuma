@@ -219,6 +219,7 @@ footer p+p{margin-top:6px}
         <div id="vt-slot"></div>
         <script type="text/javascript">(function(){var C=window.SPUMA,V=C.VARIANTES[C.VAR],t=document.getElementById('vt-slot');
           t.innerHTML='<vturb-smartplayer id="'+V.player+'" style="display:block;margin:0 auto;width:100%;max-width:'+(V.maxw||420)+'px;"><div class="vturb-player-placeholder" style="position:relative;width:100%;padding:'+V.ratio+'% 0 0;z-index:0;background-color:black;"></div></vturb-smartplayer>';
+          if(V.maxw){var w=t.closest('.tela'); if(w) w.style.maxWidth=V.maxw+'px';}
           if(V.eyebrow) document.querySelector('.hero .eyebrow').textContent=V.eyebrow;
           if(V.h1) document.querySelector('.hero h1').innerHTML=V.h1;
           if(V.lead) document.querySelector('.hero .lead').textContent=V.lead;
