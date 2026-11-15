@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Aula gravada do Ivan Bergstén: o método que tira 98% das manchas do enxoval. Para hotéis, pousadas, Airbnb e lavanderias.">
+<meta property="og:title" content="Aula de Tratamento de Manchas — Spuma Academy">
+<meta property="og:description" content="Pare de jogar enxoval no lixo por causa de mancha que tem solução.">
+<meta property="og:image" content="https://manchas.spumaacademy.com.br/img/aula97/ivan-estudio.jpg">
+<link rel="icon" href="../img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Meta Pixel (mesmo da página de manchas) -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1608967560405738');fbq('track','PageView');
+fbq('track','ViewContent',{content_name:'Pagina Aula Manchas R$97',content_category:'aula97',value:97,currency:'BRL'});
+</script>
+<title>Aula Tratamento de Manchas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+<style>
+/* Layout: página longa de venda em blocos curtos, coluna única centralizada, faixas alternando índigo profundo e índigo claro */
+:root{
+  --bg:#0c0230; --bg2:#160650; --card:#1f0b66; --line:#3a2390;
+  --fg:#f4f0ff; --muted:#bdb2ee; --mag:#f230b8; --lar:#f7a93a; --ok:#3fd69a; --bad:#ff6b7d;
+  --grad:linear-gradient(90deg,#f230b8,#f7a93a);
+  --font:'Inter',system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.band{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:64px}
+.band.alt{background:var(--bg2)}
+.wrap{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+.narrow{max-width:720px;margin:0 auto}
+.eyebrow{display:inline-block;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--lar)}
+h1,h2,h3{margin:0;text-wrap:balance;line-height:1.12}
+h1{font-size:clamp(32px,5.6vw,54px);font-weight:900;letter-spacing:-.02em}
+h2{font-size:clamp(26px,4vw,38px);font-weight:900;letter-spacing:-.015em;text-align:center}
+h3{font-size:20px;font-weight:800}
+.g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+p{margin:0}
+.lead{color:var(--muted);font-size:clamp(17px,2.2vw,20px);max-width:60ch}
+.center{text-align:center;margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--grad);color:#1a0640;font-weight:900;
+  text-transform:uppercase;letter-spacing:.04em;font-size:17px;padding:20px 34px;border-radius:14px;text-decoration:none;
+  box-shadow:0 12px 40px -10px rgba(242,48,184,.65);transition:transform .15s ease,box-shadow .15s ease;text-align:center}
+.btn:hover{transform:translateY(-2px);box-shadow:0 18px 50px -10px rgba(242,48,184,.8)}
+.btn:focus-visible{outline:3px solid var(--fg);outline-offset:3px}
+.micro{font-size:14px;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+.micro span::before{content:"✓ ";color:var(--ok);font-weight:800}
+/* hero */
+.top{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:22px 0}
+.top img{height:34px;display:block;margin:0 auto}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.hero>div{min-width:0;display:flex;flex-direction:column;gap:20px}
+.hero .photo{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/5;max-width:100%;
+  box-shadow:0 30px 80px -30px rgba(242,48,184,.55)}
+.hero .photo img{width:100%;height:100%;object-fit:cover;display:block}
+.hero .tag{position:absolute;left:14px;right:14px;bottom:14px;background:rgba(12,2,48,.82);backdrop-filter:blur(6px);
+  border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:14px}
+.hero .tag b{display:block;font-size:16px}
+.stats{display:flex;gap:22px;flex-wrap:wrap}
+.stat b{display:block;font-size:30px;font-weight:900;font-variant-numeric:tabular-nums}
+.stat span{font-size:13px;color:var(--muted)}
+/* contraste */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.col{border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.col.no{background:rgba(255,107,125,.08);border:1px solid rgba(255,107,125,.35)}
+.col.yes{background:rgba(63,214,154,.08);border:1px solid rgba(63,214,154,.4)}
+.col h3{font-size:15px;letter-spacing:.1em;text-transform:uppercase}
+.col.no h3{color:var(--bad)} .col.yes h3{color:var(--ok)}
+.col ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.col li{padding-left:28px;position:relative}
+.col.no li::before{content:"✕";position:absolute;left:0;color:var(--bad);font-weight:900}
+.col.yes li::before{content:"✓";position:absolute;left:0;color:var(--ok);font-weight:900}
+/* dores */
+.pains{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pain{background:var(--card);border-radius:14px;padding:16px 18px;font-style:italic;color:#e6defc;border-left:4px solid var(--mag)}
+.obst{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ob{background:transparent;border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:8px}
+.ob .n{font-size:13px;font-weight:800;color:var(--lar);letter-spacing:.1em}
+.ob p{color:var(--muted);font-size:15.5px}
+/* provas */
+.proofs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.proof{margin:0;background:var(--card);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.proof img{width:100%;aspect-ratio:9/14;object-fit:cover;object-position:top;display:block;max-width:100%}
+.proof figcaption{padding:14px 16px 18px;display:flex;flex-direction:column;gap:4px;font-size:14px}
+.proof q{font-style:italic;color:#e6defc;font-size:15px}
+.proof b{margin-top:6px}
+.proof span{color:var(--muted);font-size:13px}
+/* método */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step{background:var(--card);border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:10px}
+.step .num{font-size:44px;font-weight:900;line-height:1}
+.step p{color:var(--muted);font-size:15.5px}
+.bar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-radius:16px;overflow:hidden}
+.bar div{background:var(--bg2);padding:18px;text-align:center}
+.bar b{display:block;font-size:26px;font-weight:900;font-variant-numeric:tabular-nums}
+.bar span{font-size:13px;color:var(--muted)}
+/* público */
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.choice{text-align:center;font-size:19px;font-weight:700;max-width:46ch;margin:0 auto}
+/* módulos */
+.mods{display:flex;flex-direction:column;gap:12px}
+.mod{display:grid;grid-template-columns:64px 1fr;gap:18px;background:var(--card);border-radius:16px;padding:22px;align-items:start}
+.mod .n{font-size:30px;font-weight:900}
+.mod div{min-width:0}
+.mod ul{margin:8px 0 0;padding-left:18px;color:var(--muted);font-size:15.5px;display:flex;flex-direction:column;gap:4px}
+/* oferta */
+.offer{background:linear-gradient(160deg,#2a0c80,#1a0758);border:1px solid #5b3bd0;border-radius:26px;padding:36px 28px;
+  display:flex;flex-direction:column;gap:20px;align-items:center;text-align:center;max-width:620px;margin:0 auto;
+  box-shadow:0 40px 100px -40px rgba(247,169,58,.45)}
+.stack{width:100%;display:flex;flex-direction:column;gap:8px;text-align:left}
+.stack div{display:flex;gap:10px;align-items:baseline;padding-bottom:8px;border-bottom:1px dashed var(--line)}
+.stack div::before{content:"✓";color:var(--ok);font-weight:900}
+.price small{display:block;color:var(--muted);font-size:15px}
+.price .big{font-size:clamp(46px,9vw,68px);font-weight:900;line-height:1;font-variant-numeric:tabular-nums}
+.price .alt{font-size:18px;color:var(--fg);font-weight:600}
+.badges{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.badges span{font-size:13px;border:1px solid var(--line);border-radius:999px;padding:6px 12px;color:var(--muted)}
+/* autoridade */
+.auth{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:center}
+.auth .ph{border-radius:20px;overflow:hidden;aspect-ratio:1/1;max-width:100%}
+.auth .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.auth>div{min-width:0;display:flex;flex-direction:column;gap:16px}
+.auth ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.auth li{padding-left:30px;position:relative}
+.auth li::before{content:"";position:absolute;left:0;top:.45em;width:14px;height:14px;border-radius:4px;background:var(--grad)}
+/* garantia */
+.guar{display:flex;gap:28px;align-items:center;justify-content:center;flex-wrap:wrap}
+.seal{width:150px;height:150px;border-radius:50%;flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  border:3px solid var(--lar);color:var(--lar);font-weight:900;text-align:center;line-height:1.05}
+.seal b{font-size:52px}
+.guar p{max-width:52ch;color:var(--muted)}
+/* faq */
+.faq{display:flex;flex-direction:column;gap:10px}
+details{background:var(--card);border-radius:14px;padding:4px 20px}
+summary{cursor:pointer;font-weight:700;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--lar);font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);padding-bottom:18px;font-size:15.5px}
+footer{padding-block:34px 110px;text-align:center;color:var(--muted);font-size:13px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+footer img{height:28px;margin-bottom:10px}
+/* barra fixa mobile */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;align-items:center;gap:12px;
+  padding:10px max(14px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(14px,env(safe-area-inset-left,0px));
+  background:rgba(12,2,48,.94);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+.sticky .p{font-size:13px;color:var(--muted);line-height:1.2}
+.sticky .p b{display:block;color:var(--fg);font-size:17px}
+.sticky .btn{padding:14px 18px;font-size:14px;flex:1}
+@media (max-width:820px){
+  .hero,.auth{grid-template-columns:1fr}
+  .hero .photo{max-width:420px;margin:0 auto;width:100%}
+  .auth .ph{max-width:340px;margin:0 auto;width:100%}
+  .vs,.pains,.fit{grid-template-columns:1fr}
+  .obst,.steps{grid-template-columns:1fr}
+  .proofs{grid-template-columns:1fr 1fr}
+  .bar{grid-template-columns:1fr 1fr}
+  .band{padding-block:48px}
+  .sticky{display:flex}
+  .hero h1,.hero .lead{text-align:center}
+  .hero .stats{justify-content:center}
+  .hero .cta{align-items:center}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+
+</head>
+<body>
+<header class="top"><img src="../img/aula97/logo-branco.png" alt="Spuma Academy"></header>
+
+<!-- 1. HERO -->
+<section class="band">
+ <div class="wrap">
+  <div class="hero">
+   <div>
+    <span class="eyebrow">Aula gravada · Tratamento de manchas</span>
+    <h1>Pare de jogar enxoval no lixo por causa de <span class="g">mancha que tem solução</span></h1>
+    <p class="lead">O método que tira 98% das manchas nas lavanderias do Ivan Bergstén, explicado do jeito que a sua equipe consegue aplicar já na próxima lavagem. Para hotéis, pousadas, Airbnb e lavanderias.</p>
+    <div class="stats">
+     <div class="stat"><b class="g">98%</b><span>de remoção de manchas<br>nas lavanderias do Ivan</span></div>
+     <div class="stat"><b class="g">+200</b><span>alunos e lavanderias<br>já ensinados</span></div>
+     <div class="stat"><b class="g">2</b><span>tipos de mancha.<br>Não 50.</span></div>
+    </div>
+    <div class="cta" style="display:flex;flex-direction:column;gap:12px">
+     <a class="btn" href="#oferta">Quero aprender a tirar manchas</a>
+     <div class="micro" style="justify-content:flex-start"><span>Acesso imediato</span><span>Garantia de 7 dias</span><span>12x de R$ 9,97</span></div>
+    </div>
+   </div>
+   <div class="photo">
+    <img src="../img/aula97/ivan-estudio.jpg" alt="Ivan Bergstén, CEO da Spuma Academy">
+    <div class="tag"><b>Ivan Bergstén</b>CEO da Spuma Academy · criador do Método Spuma</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- 2. CONTRASTE -->
+<section class="band alt">
+ <div class="wrap">
+  <h2>A diferença entre <span class="g">trocar de produto</span> e <span class="g">ter um método</span></h2>
+  <div class="vs">
+   <div class="col no"><h3>Hoje, sem método</h3><ul>
+    <li>Toda mancha recebe o mesmo tratamento: mais cloro, mais batida, mais tempo</li>
+    <li>O alvejante vai antes de tirar a sujeira, e a mancha não sai</li>
+    <li>Troca de fornecedor e o resultado continua igual</li>
+    <li>Lençol, toalha e fronha vão pro descarte</li>
+    <li>O resultado depende do funcionário que "tem o jeito"</li>
+   </ul></div>
+   <div class="col yes"><h3>Depois da aula</h3><ul>
+    <li>Você separa sujeira de mancha e sabe o que tira cada uma</li>
+    <li>Segue uma sequência certa: sujeira, mancha, neutralização</li>
+    <li>Sabe qual princípio ativo pedir ao seu fornecedor, de qualquer marca</li>
+    <li>Recupera peças que antes iam pro lixo</li>
+    <li>A equipe toda segue o mesmo processo</li>
+   </ul></div>
+  </div>
+ </div>
+</section>
+
+<!-- 3. DORES -->
+<section class="band">
+ <div class="wrap">
+  <div class="center" style="text-align:center;display:flex;flex-direction:column;gap:10px">
+   <span class="eyebrow">Se identificou?</span>
+   <h2>Se você já disse alguma dessas frases, esta aula é pra você</h2>
+  </div>
+  <div class="pains">
+   <div class="pain">"Já lavei três vezes e a mancha continua lá."</div>
+   <div class="pain">"Coloquei mais cloro e a peça ficou amarelada."</div>
+   <div class="pain">"Protetor solar e maquiagem acabam com as minhas toalhas."</div>
+   <div class="pain">"Cada funcionário faz de um jeito e ninguém acerta."</div>
+   <div class="pain">"Já troquei de produto e não mudou nada."</div>
+   <div class="pain">"Todo mês tenho que repor enxoval que ainda estava bom."</div>
+  </div>
+  <div class="obst">
+   <div class="ob"><span class="n">ERRO 01</span><h3>Tratar mancha como sujeira</h3><p>Esfregar e bater mais na máquina não tira mancha. Mancha é reação química e só sai com outra reação química.</p></div>
+   <div class="ob"><span class="n">ERRO 02</span><h3>Alvejar antes de lavar</h3><p>A sujeira cobre a mancha. Enquanto ela estiver ali, o alvejante não chega onde precisa.</p></div>
+   <div class="ob"><span class="n">ERRO 03</span><h3>Achar que existem 50 tipos</h3><p>Só existem 2 tipos de mancha. Quem não sabe disso gasta produto errado nas manchas difíceis.</p></div>
+  </div>
+ </div>
+</section>
+
+<!-- 4. PROVAS -->
+<section class="band alt">
+ <div class="wrap">
+  <div style="text-align:center;display:flex;flex-direction:column;gap:10px">
+   <span class="eyebrow">Provas reais</span>
+   <h2>Quem aplicou o método <span class="g">mandou o resultado</span></h2>
+  </div>
+  <div class="proofs">
+   <figure class="proof"><img src="../img/prints/luiza.jpg" alt="Conversa de WhatsApp com Luiza, hotel bahia" loading="lazy"><figcaption><q>Dos 127 lençóis só dois não saíram as manchas.</q><b>Luiza</b><span>Hotel Bahia</span></figcaption></figure>
+   <figure class="proof"><img src="../img/prints/johanna.jpg" alt="Conversa de WhatsApp com Johanna, gerente de hotel" loading="lazy"><figcaption><q>O pior resultado que tivemos foi com 97% de peças recuperadas.</q><b>Johanna</b><span>Gerente de hotel</span></figcaption></figure>
+   <figure class="proof"><img src="../img/prints/neto.jpg" alt="Conversa de WhatsApp com Neto, gestor de hotel" loading="lazy"><figcaption><q>O primeiro resultado foi 94% de peças recuperadas.</q><b>Neto</b><span>Gestor de hotel</span></figcaption></figure>
+   <figure class="proof"><img src="../img/prints/antonio.jpg" alt="Conversa de WhatsApp com Antônio, lavanderia de hotel" loading="lazy"><figcaption><q>Superou minhas expectativas.</q><b>Antônio</b><span>Lavanderia de hotel</span></figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<!-- 5. MÉTODO -->
+<section class="band">
+ <div class="wrap">
+  <div style="text-align:center;display:flex;flex-direction:column;gap:10px">
+   <span class="eyebrow">O Método Spuma</span>
+   <h2>3 etapas, na ordem certa</h2>
+  </div>
+  <div class="steps">
+   <div class="step"><span class="num g">01</span><h3>Remover a sujeira</h3><p>Você aprende os 4 tipos de sujeira (hidrossolúvel, particulada, oleosa e a que já virou mancha) e o que tira cada uma.</p></div>
+   <div class="step"><span class="num g">02</span><h3>Remover a mancha</h3><p>Oxidação leve, depois redução, depois oxidação intensa. O que saiu, saiu. O que ficou passa para o próximo passo.</p></div>
+   <div class="step"><span class="num g">03</span><h3>Neutralizar</h3><p>Deixar o pH neutro e amaciar, para a peça voltar bonita e durar mais lavagens.</p></div>
+  </div>
+  <div class="bar">
+   <div><b class="g">2</b><span>tipos de mancha</span></div>
+   <div><b class="g">90%</b><span>saem por oxidação</span></div>
+   <div><b class="g">4</b><span>ferramentas de lavagem</span></div>
+   <div><b class="g">98%</b><span>de remoção na Spuma</span></div>
+  </div>
+ </div>
+</section>
+
+<!-- 6. PARA QUEM É -->
+<section class="band alt">
+ <div class="wrap">
+  <h2>Pra quem é (e pra quem não é)</h2>
+  <div class="fit">
+   <div class="col yes"><h3>É pra você se</h3><ul>
+    <li>Tem hotel, pousada ou Airbnb e cuida do próprio enxoval</li>
+    <li>Tem lavanderia doméstica, industrial ou self-service</li>
+    <li>Trabalha em lavanderia de hospital ou clínica</li>
+    <li>Faz higienização de estofados e tapetes</li>
+    <li>Quer parar de perder peça por mancha</li>
+   </ul></div>
+   <div class="col no"><h3>Não é pra você se</h3><ul>
+    <li>Procura um produto milagroso que resolve tudo sozinho</li>
+    <li>Não quer mudar nada no processo de lavagem</li>
+    <li>Prefere continuar repondo enxoval todo mês</li>
+   </ul></div>
+  </div>
+  <p class="choice">Você pode continuar testando produto atrás de produto, ou aprender o método uma vez e aplicar pra sempre.</p>
+ </div>
+</section>
+
+<!-- 7. O QUE VOCÊ APRENDE -->
+<section class="band">
+ <div class="wrap narrow" style="max-width:820px">
+  <div style="text-align:center;display:flex;flex-direction:column;gap:10px">
+   <span class="eyebrow">Dentro da aula</span>
+   <h2>O que você vai aprender</h2>
+  </div>
+  <div class="mods">
+   <div class="mod"><span class="n g">01</span><div><h3>Mancha não é sujeira</h3><ul><li>Por que esfregar não resolve</li><li>Sujeira adsorvida e sujeira entranhada</li><li>Por que a sujeira esconde a mancha</li></ul></div></div>
+   <div class="mod"><span class="n g">02</span><div><h3>As 4 ferramentas da lavagem</h3><ul><li>Ação mecânica: as 3 boas e as 3 que estragam a peça</li><li>Ação química, temperatura e tempo</li><li>Como combinar as quatro</li></ul></div></div>
+   <div class="mod"><span class="n g">03</span><div><h3>Os 4 tipos de sujeira</h3><ul><li>Sangue, urina e suco saem com água</li><li>Terra e barro saem com detergente</li><li>Protetor, maquiagem e bronzeador saem com desengraxante</li></ul></div></div>
+   <div class="mod"><span class="n g">04</span><div><h3>Os 2 tipos de mancha</h3><ul><li>Manchas de oxidação: 90% dos casos</li><li>Manchas de redução: protetor solar, maquiagem, ferrugem e medicamento</li><li>Os princípios ativos de cada uma, sem depender de marca</li></ul></div></div>
+   <div class="mod"><span class="n g">05</span><div><h3>A sequência do Método Spuma</h3><ul><li>Oxidação leve, redução e oxidação intensa</li><li>Neutralização e amaciamento</li><li>Como aplicar na rotina da sua equipe</li></ul></div></div>
+  </div>
+  <div style="text-align:center"><a class="btn" href="#oferta">Quero acessar a aula</a></div>
+ </div>
+</section>
+
+<!-- 7b. BÔNUS -->
+<section class="band alt">
+ <div class="wrap">
+  <div style="text-align:center;display:flex;flex-direction:column;gap:10px">
+   <span class="eyebrow">Comprando hoje</span>
+   <h2>Você também leva <span class="g">2 bônus</span> pra usar na lavanderia</h2>
+  </div>
+  <div class="steps" style="grid-template-columns:repeat(2,1fr)">
+   <div class="step"><span class="num g">B1</span><h3>Tabela de Manchas</h3><p>A tabela orientativa da Spuma pra imprimir e colar na parede da lavanderia: qual mancha, qual tipo e qual tratamento. A equipe consulta na hora, sem depender de ninguém.</p><p style="color:var(--lar);font-weight:700;font-size:14px">Material que faz parte do Acesso Completo da Spuma Academy</p></div>
+   <div class="step"><span class="num g">B2</span><h3>Tabela de Tecidos</h3><p>Nem todo tratamento serve pra todo tecido. A tabela mostra o que cada tecido aguenta, pra você tirar a mancha sem estragar a peça.</p><p style="color:var(--lar);font-weight:700;font-size:14px">Material que faz parte do Acesso Completo da Spuma Academy</p></div>
+  </div>
+ </div>
+</section>
+
+<!-- 8. OFERTA -->
+<section class="band" id="oferta">
+ <div class="wrap">
+  <div class="offer">
+   <span class="eyebrow">Acesso imediato</span>
+   <h2 style="font-size:clamp(24px,3.6vw,32px)">Aula de Tratamento de Manchas</h2>
+   <div class="stack">
+    <div>Aula completa com o Método Spuma de remoção de manchas</div>
+    <div>Os 4 tipos de sujeira e o que tira cada um</div>
+    <div>Os 2 tipos de mancha e os princípios ativos de cada</div>
+    <div>Sequência para aplicar com a sua equipe</div>
+    <div>Acesso pela plataforma da Spuma Academy</div>
+    <div><b>Bônus 1:</b>&nbsp;Tabela de Manchas pra colar na lavanderia</div>
+    <div><b>Bônus 2:</b>&nbsp;Tabela de Tecidos</div>
+   </div>
+   <p style="color:var(--muted)">Muitas vezes custa menos do que uma única peça de enxoval que vai pro lixo.</p>
+   <div class="price">
+    <small>Hoje você leva por</small>
+    <div class="big g">12x R$ 9,97</div>
+    <div class="alt">ou R$ 97 à vista</div>
+   </div>
+   <a class="btn" href="https://payfast.greenn.com.br/199767" target="_blank" rel="noopener" style="width:100%">Quero tirar minhas manchas agora</a>
+   <div class="badges"><span>🔒 Compra segura</span><span>Garantia de 7 dias</span><span>Acesso imediato</span></div>
+  </div>
+ </div>
+</section>
+
+<!-- 9. AUTORIDADE -->
+<section class="band">
+ <div class="wrap">
+  <div class="auth">
+   <div class="ph"><img src="../img/aula97/ivan-lavanderia.jpg" alt="Ivan Bergstén em uma das lavanderias Spuma"></div>
+   <div>
+    <span class="eyebrow">Quem te ensina</span>
+    <h2 style="text-align:left">Ivan Bergstén</h2>
+    <ul>
+     <li>CEO da Spuma Academy e criador do Método Spuma</li>
+     <li>Engenheiro, com 3 pós-graduações e mestre em engenharia industrial</li>
+     <li>Dono de lavanderias próprias, onde a remoção de manchas chega a 98%</li>
+     <li>Projeta fábricas de produtos químicos e lavanderias hospitalares e comerciais</li>
+     <li>Mais de 10 anos no setor de produtos químicos de limpeza e higiene</li>
+     <li>Mais de 200 alunos e lavanderias ensinados</li>
+    </ul>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- 10. GARANTIA -->
+<section class="band alt">
+ <div class="wrap">
+  <div class="guar">
+   <div class="seal"><b>7</b>DIAS DE<br>GARANTIA</div>
+   <div style="display:flex;flex-direction:column;gap:10px">
+    <h2 style="text-align:left">Risco zero pra você</h2>
+    <p>Assista à aula. Se em até 7 dias você achar que ela não é pra você, é só pedir o reembolso e devolvemos 100% do valor. Sem perguntas.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- 11. FAQ -->
+<section class="band">
+ <div class="wrap narrow">
+  <h2>Perguntas frequentes</h2>
+  <div class="faq">
+   <details><summary>Serve pra quem tem hotel ou pousada pequena?</summary><p>Sim. O método é o mesmo para qualquer volume. A aula foi pensada justamente para quem cuida do próprio enxoval: hotéis, pousadas e Airbnb.</p></details>
+   <details><summary>Preciso comprar os produtos da Spuma?</summary><p>Não. Você aprende os princípios ativos de cada tratamento e pode pedir ao seu fornecedor atual, de qualquer marca.</p></details>
+   <details><summary>Funciona pra protetor solar e maquiagem?</summary><p>Sim. Essas estão entre as manchas de redução, as mais difíceis, e a aula mostra exatamente como tratar cada uma.</p></details>
+   <details><summary>Preciso entender de química?</summary><p>Não. O Ivan explica a parte química de forma simples, com exemplos da rotina de lavanderia.</p></details>
+   <details><summary>Já tentei de tudo e nada funcionou. Por que agora seria diferente?</summary><p>Porque o problema normalmente não é o produto, e sim a ordem e o tipo de tratamento. A aula ensina a sequência certa, e não um produto novo.</p></details>
+   <details><summary>Como recebo o acesso?</summary><p>Logo depois da confirmação do pagamento você recebe o acesso à aula na plataforma da Spuma Academy, por e-mail.</p></details>
+   <details><summary>Posso parcelar?</summary><p>Sim, em até 12x de R$ 9,97 no cartão, ou R$ 97 à vista no Pix.</p></details>
+   <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. Se não for pra você, devolvemos 100% do valor.</p></details>
+  </div>
+  <div style="text-align:center"><a class="btn" href="#oferta">Quero acessar a aula</a></div>
+ </div>
+</section>
+
+<footer>
+ <img src="../img/aula97/logo-branco.png" alt="Spuma Academy"><br>
+ Spuma Academy · Grupo Spuma<br>Conhecimento aplicado à lavanderia profissional.
+</footer>
+
+<div class="sticky">
+ <div class="p">Aula de Manchas<b>12x R$ 9,97</b></div>
+ <a class="btn" href="#oferta">Quero agora</a>
+</div>
+
+<script>
+/* leva UTMs, fbclid e src do anúncio até o checkout da Greenn + evento de clique */
+(function(){
+  var qs=new URLSearchParams(location.search);
+  document.querySelectorAll('a[href^="https://payfast.greenn.com.br"]').forEach(function(a){
+    var u=new URL(a.href);
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','src','sck'].forEach(function(k){if(qs.get(k))u.searchParams.set(k,qs.get(k));});
+    if(!u.searchParams.get('src')&&qs.get('utm_content'))u.searchParams.set('src',qs.get('utm_content'));
+    if(!u.searchParams.get('sck'))u.searchParams.set('sck','pag-aula97');
+    a.href=u.toString();
+    a.addEventListener('click',function(){if(window.fbq)fbq('track','InitiateCheckout',{content_name:'Aula Manchas R$97',value:97,currency:'BRL'});});
+  });
+})();
+</script>
+</body>
+</html>
