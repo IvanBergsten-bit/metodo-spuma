@@ -64,6 +64,13 @@ p{margin:0}
 .stats{display:flex;gap:22px;flex-wrap:wrap}
 .stat b{display:block;font-size:30px;font-weight:900;font-variant-numeric:tabular-nums}
 .stat span{font-size:13px;color:var(--muted)}
+/* promessa */
+.promise{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-radius:18px;overflow:hidden}
+.promise div{background:var(--bg);padding:20px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.promise span{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--lar)}
+.promise b{font-size:16px;line-height:1.35}
+@media (max-width:820px){.promise{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.promise{grid-template-columns:1fr}}
 /* contraste */
 .vs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .col{border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:12px;min-width:0}
@@ -177,9 +184,9 @@ footer img{height:28px;margin-bottom:10px}
  <div class="wrap">
   <div class="hero">
    <div>
-    <span class="eyebrow">Aula gravada · Tratamento de manchas</span>
-    <h1>Pare de jogar enxoval no lixo por causa de <span class="g">mancha que tem solução</span></h1>
-    <p class="lead">O método que tira 98% das manchas nas lavanderias do Ivan Bergstén, explicado do jeito que a sua equipe consegue aplicar já na próxima lavagem. Para hotéis, pousadas, Airbnb e lavanderias.</p>
+    <span class="eyebrow">Aula gravada de 3 horas · Tratamento de manchas</span>
+    <h1>Recupere o enxoval manchado <span class="g">a partir da próxima lavagem</span></h1>
+    <p class="lead">O método que tira 98% das manchas nas lavanderias do Ivan Bergstén, para hotéis, pousadas, Airbnb e lavanderias. Sem trocar de fornecedor, sem esfregar e sem precisar entender de química.</p>
     <div class="stats">
      <div class="stat"><b class="g">98%</b><span>de remoção de manchas<br>nas lavanderias do Ivan</span></div>
      <div class="stat"><b class="g">+200</b><span>alunos e lavanderias<br>já ensinados</span></div>
@@ -198,8 +205,20 @@ footer img{height:28px;margin-bottom:10px}
  </div>
 </section>
 
+<!-- 1b. PROMESSA -->
+<section class="band alt" style="padding-block:40px">
+ <div class="wrap">
+  <div class="promise">
+   <div><span>O que você conquista</span><b>Tirar as manchas que hoje mandam lençol, toalha e fronha pro lixo</b></div>
+   <div><span>Em quanto tempo</span><b>3 horas de aula. Você aplica já na próxima lavagem</b></div>
+   <div><span>Para quem</span><b>Hotéis, pousadas, Airbnb, lavanderias, hospitais e clínicas</b></div>
+   <div><span>Sem precisar</span><b>Trocar de fornecedor, comprar produto caro, esfregar nem saber química</b></div>
+  </div>
+ </div>
+</section>
+
 <!-- 4. PROVAS -->
-<section class="band alt">
+<section class="band">
  <div class="wrap">
   <div style="text-align:center;display:flex;flex-direction:column;gap:10px">
    <span class="eyebrow">Provas reais</span>
@@ -215,7 +234,7 @@ footer img{height:28px;margin-bottom:10px}
 </section>
 
 <!-- 2. CONTRASTE -->
-<section class="band">
+<section class="band alt">
  <div class="wrap">
   <h2>A diferença entre <span class="g">trocar de produto</span> e <span class="g">ter um método</span></h2>
   <div class="vs">
@@ -238,7 +257,7 @@ footer img{height:28px;margin-bottom:10px}
 </section>
 
 <!-- 3. DORES -->
-<section class="band alt">
+<section class="band">
  <div class="wrap">
   <div class="center" style="text-align:center;display:flex;flex-direction:column;gap:10px">
    <span class="eyebrow">Se identificou?</span>
@@ -261,7 +280,7 @@ footer img{height:28px;margin-bottom:10px}
 </section>
 
 <!-- 5. MÉTODO -->
-<section class="band">
+<section class="band alt">
  <div class="wrap">
   <div style="text-align:center;display:flex;flex-direction:column;gap:10px">
    <span class="eyebrow">O Método Spuma</span>
@@ -282,7 +301,7 @@ footer img{height:28px;margin-bottom:10px}
 </section>
 
 <!-- 6. PARA QUEM É -->
-<section class="band alt">
+<section class="band">
  <div class="wrap">
   <h2>Pra quem é (e pra quem não é)</h2>
   <div class="fit">
@@ -304,25 +323,27 @@ footer img{height:28px;margin-bottom:10px}
 </section>
 
 <!-- 7. O QUE VOCÊ APRENDE -->
-<section class="band">
+<section class="band alt">
  <div class="wrap narrow" style="max-width:820px">
   <div style="text-align:center;display:flex;flex-direction:column;gap:10px">
    <span class="eyebrow">Dentro da aula</span>
    <h2>O que você vai aprender</h2>
   </div>
   <div class="mods">
-   <div class="mod"><span class="n g">01</span><div><h3>Mancha não é sujeira</h3><ul><li>Por que esfregar não resolve</li><li>Sujeira adsorvida e sujeira entranhada</li><li>Por que a sujeira esconde a mancha</li></ul></div></div>
-   <div class="mod"><span class="n g">02</span><div><h3>As 4 ferramentas da lavagem</h3><ul><li>Ação mecânica: as 3 boas e as 3 que estragam a peça</li><li>Ação química, temperatura e tempo</li><li>Como combinar as quatro</li></ul></div></div>
-   <div class="mod"><span class="n g">03</span><div><h3>Os 4 tipos de sujeira</h3><ul><li>Sangue, urina e suco saem com água</li><li>Terra e barro saem com detergente</li><li>Protetor, maquiagem e bronzeador saem com desengraxante</li></ul></div></div>
-   <div class="mod"><span class="n g">04</span><div><h3>Os 2 tipos de mancha</h3><ul><li>Manchas de oxidação: 90% dos casos</li><li>Manchas de redução: protetor solar, maquiagem, ferrugem e medicamento</li><li>Os princípios ativos de cada uma, sem depender de marca</li></ul></div></div>
-   <div class="mod"><span class="n g">05</span><div><h3>A sequência do Método Spuma</h3><ul><li>Oxidação leve, redução e oxidação intensa</li><li>Neutralização e amaciamento</li><li>Como aplicar na rotina da sua equipe</li></ul></div></div>
+   <div class="mod"><span class="n g">01</span><div><h3>Mancha não é sujeira</h3><ul><li>Por que esfregar não tira mancha e alvejante não tira sujeira</li><li>A ordem certa: primeiro a sujeira, depois a mancha</li></ul></div></div>
+   <div class="mod"><span class="n g">02</span><div><h3>As 4 ferramentas de qualquer lavagem</h3><ul><li>Ação química, ação mecânica, temperatura e tempo (o ciclo de Sinner)</li><li>Como compensar uma ferramenta com a outra quando falta tempo ou máquina</li></ul></div></div>
+   <div class="mod"><span class="n g">03</span><div><h3>Os 4 tipos de sujeira e o que tira cada um</h3><ul><li>Hidrossolúveis, particuladas, oleosas e as que deixam mancha</li><li>Desengraxante certo para protetor, maquiagem, desodorante e óleo do corpo</li></ul></div></div>
+   <div class="mod"><span class="n g">04</span><div><h3>A química das manchas, explicada simples</h3><ul><li>Oxidação e redução: por que só existem 2 tipos de mancha</li><li>Cloro × oxigênio (peróxido e percarbonato): quando usar cada um e em qual temperatura</li><li>Por que nenhum produto deve ir direto em cima do tecido</li></ul></div></div>
+   <div class="mod"><span class="n g">05</span><div><h3>As manchas difíceis, uma por uma</h3><ul><li>Protetor solar, medicamento e clorexidina</li><li>Batom, maquiagem, ferrugem, sangue, vinho e café</li><li>Migração de cor entre peças</li></ul></div></div>
+   <div class="mod"><span class="n g">06</span><div><h3>O protocolo na prática</h3><ul><li>O molho com oxidação leve que tira 90% das manchas</li><li>O que fazer quando não sai: redução e oxidação intensa</li><li>Como pedir os produtos certos para o seu fornecedor, de qualquer marca</li></ul></div></div>
+   <div class="mod"><span class="n g">07</span><div><h3>Perguntas reais de lavanderias, respondidas ao vivo</h3><ul><li>Tinta de cabelo, toalhas amareladas, cortinas, manchas de salão</li><li>Produtos e fornecedores usados por outras lavanderias do Brasil</li></ul></div></div>
   </div>
   <div style="text-align:center"><a class="btn" href="#oferta">Quero acessar a aula</a></div>
  </div>
 </section>
 
 <!-- 7b. BÔNUS -->
-<section class="band alt">
+<section class="band">
  <div class="wrap">
   <div style="text-align:center;display:flex;flex-direction:column;gap:10px">
    <span class="eyebrow">Comprando hoje</span>
@@ -337,13 +358,13 @@ footer img{height:28px;margin-bottom:10px}
 </section>
 
 <!-- 8. OFERTA -->
-<section class="band" id="oferta">
+<section class="band alt" id="oferta">
  <div class="wrap">
   <div class="offer">
    <span class="eyebrow">Acesso imediato</span>
    <h2 style="font-size:clamp(24px,3.6vw,32px)">Aula de Tratamento de Manchas</h2>
    <div class="stack">
-    <div>Aula completa com o Método Spuma de remoção de manchas</div>
+    <div>Aula completa de 3 horas com o Método Spuma de remoção de manchas</div>
     <div>Os 4 tipos de sujeira e o que tira cada um</div>
     <div>Os 2 tipos de mancha e os princípios ativos de cada</div>
     <div>Sequência para aplicar com a sua equipe</div>
