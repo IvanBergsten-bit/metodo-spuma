@@ -22,7 +22,7 @@
 /* ======================= CONFIGURAÇÃO ======================= */
 window.SPUMA = {
   PIXEL_ID: '1608967560405738', // Pixel do Meta (PIXEL 01 - lp.spumaacademy)
-  CHECKOUT: 'https://payfast.greenn.com.br/187311/offer/Fqoagd?ch_id=145633&b_id_1=200573&b_offer_1=XbL60I&b_id_2=199751&b_offer_2=MuByed&b_id_3=200576&b_offer_3=MjGD7R&b_id_4=199766&b_offer_4=nOXKlD',
+  CHECKOUT: 'https://payfast.greenn.com.br/187311/offer/Fqoagd?ch_id=145633&b_id_1=200573&b_offer_1=XbL60I&b_id_2=199751&b_offer_2=MuByed',
   REVELAR_EM: 755,              // padrão; cada variante abaixo define o seu
   VALOR: 290.83, MOEDA: 'BRL',
   /* ===== TESTE A/B/C (C1): a página sorteia 1 variante por visitante e guarda no navegador =====
@@ -81,6 +81,7 @@ a{color:inherit}
 .wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .esconder{display:none}
+.entrar{display:flex;flex-direction:column;align-items:center;gap:8px;margin:18px auto 6px;max-width:420px}.entrar .btn{width:100%;text-align:center}.entrar span{font-size:13px;opacity:.75}
 .ja-sei{text-align:center;margin:10px 0 4px}.ja-sei a{display:inline-block;font-size:14px;font-weight:600;color:var(--navy);text-decoration:underline;text-underline-offset:3px;padding:8px 12px;opacity:.85}.ja-sei a:hover{opacity:1}
 .eyebrow{display:inline-block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.2em;color:var(--magenta)}
 .h2{font-size:clamp(24px,4.6vw,38px);font-weight:600;text-transform:uppercase;line-height:1.1;letter-spacing:-.01em;color:var(--navy);text-wrap:balance}
@@ -231,7 +232,7 @@ footer p+p{margin-top:6px}
           var s=document.createElement("script");s.src=V.script;s.async=!0;document.head.appendChild(s);})();</script>
       </div>
       <p class="som"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/></svg>Confira se o som do celular está ligado</p>
-      <p class="ja-sei"><a href="#ofertas" id="ver-planos">Já sei o que quero · ver os planos e preços ↓</a></p>
+      <div class="entrar"><a class="btn" href="#ofertas" id="ver-planos">Quero entrar no Método Spuma PRO</a><span>Acesso imediato · Garantia de 7 dias</span></div>
       <ul class="chips" aria-label="Manchas abordadas">
         <li>Protetor solar</li><li>Maquiagem</li><li>Sangue</li><li>Mofo</li><li>Ferrugem</li><li>Clorexidina</li><li>Gordura</li><li>Amarelado</li>
       </ul>
@@ -413,7 +414,7 @@ footer p+p{margin-top:6px}
   /* --- atalho para quem não quer assistir: link abaixo do vídeo + barra fixa depois de 90 s na página --- */
   var vp = document.getElementById('ver-planos');
   if(vp) vp.addEventListener('click', function(e){ e.preventDefault(); px('trackCustom','CliqueVerPlanos',{variante: C.VAR}); var o = document.getElementById('ofertas'); if(o) o.scrollIntoView({behavior:'smooth'}); });
-  setTimeout(function(){ if(!revelado) revelar('tempo'); }, 90000);
+  setTimeout(function(){ if(!revelado) revelar('tempo'); }, 20000);
   /* --- vídeo VTurb: play e momento da oferta (o % assistido é enviado pela própria VTurb) --- */
   var iniciou = false;
   function tempo(seg, dur){
