@@ -180,6 +180,10 @@ footer img{height:28px;margin-bottom:10px}
   .hero .stats{justify-content:center}
   .hero .cta{align-items:center}
 }
+
+/* modo diagnóstico (vindo do quiz): página abaixo do vídeo aparece com atraso, no momento da oferta */
+body.quiz:not(.liberado) .h-rest, body.quiz:not(.liberado) section.band:not(:first-of-type), body.quiz:not(.liberado) .sticky, body.quiz:not(.liberado) footer{display:none!important}
+body.quiz .h-video{order:-1}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 
@@ -491,5 +495,20 @@ footer img{height:28px;margin-bottom:10px}
 })();
 </script>
 <script>var s=document.createElement("script");s.src="https://scripts.converteai.net/490fcde4-35cc-4dee-9340-3aa502da3ba2/players/6b01b62cc5d07a6e9c55a24c/v4/player.js";s.async=true;document.head.appendChild(s);</script>
+<script>
+/* vindo do diagnóstico (quiz): manchete personalizada e resto da página só no momento da oferta do vídeo */
+(function(){
+  var q=new URLSearchParams(location.search); if(q.get('d')!=='1') return;
+  var OFERTA=158, nome=(q.get('n')||'').replace(/[^\p{L} ]/gu,'').slice(0,30);
+  document.body.classList.add('quiz');
+  var eb=document.querySelector('.h-head .eyebrow'), h1=document.querySelector('.h-head h1'), vn=document.querySelector('.vnote');
+  if(eb) eb.textContent='Seu diagnóstico está pronto';
+  if(h1) h1.innerHTML=(nome?nome+', assista':'Assista')+' ao seu protocolo: <span class="g">como tirar a mancha a partir da próxima lavagem</span>';
+  if(vn) vn.textContent='Ligue o som e assista até o final: o acesso ao protocolo completo aparece logo abaixo do vídeo';
+  var lib=false; function liberar(){ if(lib) return; lib=true; document.body.classList.add('liberado'); try{fbq('trackCustom','ViuOferta',{pagina:'aula97-quiz'});}catch(e){} }
+  setInterval(function(){ try{ var sp=window.smartplayer&&smartplayer.instances&&smartplayer.instances[0]; var v=sp&&sp.video; if(v&&v.currentTime>=OFERTA) liberar(); }catch(e){} },1000);
+  setTimeout(liberar, 300000);
+})();
+</script>
 </body>
 </html>
