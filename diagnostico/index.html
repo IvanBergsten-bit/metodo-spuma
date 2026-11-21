@@ -89,48 +89,109 @@ p{margin:0}
  <section class="step on" data-step="0">
   <span class="eyebrow">Diagnóstico gratuito · leva 1 minuto</span>
   <h1>Descubra por que a mancha <span class="g">não sai do seu enxoval</span></h1>
-  <p class="muted">Responda 7 perguntas rápidas sobre a sua operação. No final você recebe o diagnóstico e o protocolo do engenheiro Ivan Bergstén para tirar a mancha a partir da próxima lavagem.</p>
+  <p class="muted">Responda algumas perguntas rápidas sobre a sua operação. No final você recebe o diagnóstico e o protocolo do engenheiro Ivan Bergstén para tirar a mancha a partir da próxima lavagem.</p>
   <div class="proof"><span><b>98%</b> de remoção nas lavanderias do Ivan</span><span><b>+200</b> alunos e lavanderias</span></div>
   <button class="btn" type="button" id="comecar">Fazer meu diagnóstico</button>
   <p class="note">Para hotéis, pousadas, lavanderias, hospitais e Airbnb.</p>
  </section>
 
- <!-- PERGUNTAS (método SPIN: situação → problema → implicação → necessidade) -->
+ <!-- PERGUNTAS (método SPIN: situação → problema → implicação → necessidade). data-if = só aparece para quem escolheu aquela resposta -->
  <section class="step" data-step="q" data-key="segmento">
-  <span class="eyebrow">Pergunta 1 de 7</span>
-  <h2>Onde você cuida de enxoval?</h2>
+  <span class="eyebrow qn">Pergunta</span>
+  <h2>Qual é o seu contexto?</h2>
   <div class="opts">
-   <button class="opt" data-v="Hotel ou pousada" data-p="40"><span class="k">A</span>Hotel ou pousada</button>
-   <button class="opt" data-v="Lavanderia comercial ou industrial" data-p="40"><span class="k">B</span>Lavanderia comercial ou industrial</button>
+   <button class="opt" data-v="Hotel ou pousada" data-p="40"><span class="k">A</span>Tenho ou trabalho em hotel ou pousada</button>
+   <button class="opt" data-v="Lavanderia" data-p="35"><span class="k">B</span>Tenho ou trabalho em lavanderia</button>
    <button class="opt" data-v="Hospital ou clínica" data-p="35"><span class="k">C</span>Hospital ou clínica</button>
-   <button class="opt" data-v="Airbnb ou casa de temporada" data-p="15"><span class="k">D</span>Airbnb ou casa de temporada</button>
+   <button class="opt" data-v="Airbnb ou temporada" data-p="15"><span class="k">D</span>Airbnb ou casa de temporada</button>
   </div>
  </section>
-
+ <section class="step" data-step="q" data-key="tipo_lavanderia" data-if="segmento=Lavanderia">
+  <span class="eyebrow qn">Pergunta</span>
+  <h2>Que tipo de lavanderia?</h2>
+  <div class="opts">
+   <button class="opt" data-v="Industrial" data-p="10"><span class="k">A</span>Industrial: atendo hotéis, hospitais ou empresas</button>
+   <button class="opt" data-v="Comercial ou self-service" data-p="5"><span class="k">B</span>Comercial ou self-service: atendo o público</button>
+   <button class="opt" data-v="Doméstica" data-p="0"><span class="k">C</span>Doméstica: lavo em casa para clientes</button>
+  </div>
+ </section>
+ <section class="step" data-step="q" data-key="maquinas" data-if="segmento=Lavanderia">
+  <span class="eyebrow qn">Pergunta</span>
+  <h2>Com que máquinas vocês lavam?</h2>
+  <div class="opts">
+   <button class="opt" data-v="Industriais" data-p="5"><span class="k">A</span>Máquinas industriais</button>
+   <button class="opt" data-v="Domésticas" data-p="0"><span class="k">B</span>Máquinas domésticas</button>
+   <button class="opt" data-v="As duas" data-p="3"><span class="k">C</span>Um pouco de cada</button>
+  </div>
+ </section>
+ <section class="step" data-step="q" data-key="porte" data-if="segmento=Lavanderia">
+  <span class="eyebrow qn">Pergunta</span>
+  <h2>Quanto vocês lavam por dia?</h2>
+  <div class="opts">
+   <button class="opt" data-v="Até 50 kg/dia" data-p="5"><span class="k">A</span>Até 50 kg</button>
+   <button class="opt" data-v="50 a 300 kg/dia" data-p="15"><span class="k">B</span>De 50 a 300 kg</button>
+   <button class="opt" data-v="Mais de 300 kg/dia" data-p="20"><span class="k">C</span>Mais de 300 kg</button>
+   <button class="opt" data-v="Não sei (lavanderia)" data-p="5"><span class="k">D</span>Não sei dizer</button>
+  </div>
+ </section>
+ <section class="step" data-step="q" data-key="porte" data-if="segmento=Hotel ou pousada">
+  <span class="eyebrow qn">Pergunta</span>
+  <h2>Quantos quartos tem o hotel ou a pousada?</h2>
+  <div class="opts">
+   <button class="opt" data-v="Até 15 quartos" data-p="5"><span class="k">A</span>Até 15 quartos</button>
+   <button class="opt" data-v="16 a 40 quartos" data-p="15"><span class="k">B</span>De 16 a 40 quartos</button>
+   <button class="opt" data-v="41 a 100 quartos" data-p="20"><span class="k">C</span>De 41 a 100 quartos</button>
+   <button class="opt" data-v="Mais de 100 quartos" data-p="25"><span class="k">D</span>Mais de 100 quartos</button>
+  </div>
+ </section>
+ <section class="step" data-step="q" data-key="maquinas" data-if="segmento=Hotel ou pousada">
+  <span class="eyebrow qn">Pergunta</span>
+  <h2>Onde o enxoval é lavado hoje?</h2>
+  <div class="opts">
+   <button class="opt" data-v="Própria, industriais" data-p="5"><span class="k">A</span>Lavanderia própria, com máquinas industriais</button>
+   <button class="opt" data-v="Própria, domésticas" data-p="3"><span class="k">B</span>Lavanderia própria, com máquinas domésticas</button>
+   <button class="opt" data-v="Terceirizada" data-p="0"><span class="k">C</span>Mando para uma lavanderia terceirizada</button>
+  </div>
+ </section>
+ <section class="step" data-step="q" data-key="porte" data-if="segmento=Hospital ou clínica">
+  <span class="eyebrow qn">Pergunta</span>
+  <h2>Quantos leitos tem a unidade?</h2>
+  <div class="opts">
+   <button class="opt" data-v="Até 30 leitos" data-p="10"><span class="k">A</span>Até 30 leitos</button>
+   <button class="opt" data-v="31 a 100 leitos" data-p="20"><span class="k">B</span>De 31 a 100 leitos</button>
+   <button class="opt" data-v="Mais de 100 leitos" data-p="25"><span class="k">C</span>Mais de 100 leitos</button>
+   <button class="opt" data-v="Não sei (hospital)" data-p="10"><span class="k">D</span>Não sei dizer</button>
+  </div>
+ </section>
+ <section class="step" data-step="q" data-key="maquinas" data-if="segmento=Hospital ou clínica">
+  <span class="eyebrow qn">Pergunta</span>
+  <h2>Onde a roupa é lavada hoje?</h2>
+  <div class="opts">
+   <button class="opt" data-v="Própria" data-p="5"><span class="k">A</span>Lavanderia própria</button>
+   <button class="opt" data-v="Terceirizada" data-p="0"><span class="k">B</span>Lavanderia terceirizada</button>
+  </div>
+ </section>
+ <section class="step" data-step="q" data-key="porte" data-if="segmento=Airbnb ou temporada">
+  <span class="eyebrow qn">Pergunta</span>
+  <h2>Quantos imóveis você administra?</h2>
+  <div class="opts">
+   <button class="opt" data-v="1 a 3 imóveis" data-p="0"><span class="k">A</span>1 a 3 imóveis</button>
+   <button class="opt" data-v="4 a 10 imóveis" data-p="10"><span class="k">B</span>4 a 10 imóveis</button>
+   <button class="opt" data-v="Mais de 10 imóveis" data-p="15"><span class="k">C</span>Mais de 10 imóveis</button>
+  </div>
+ </section>
  <section class="step" data-step="q" data-key="cargo">
-  <span class="eyebrow">Pergunta 2 de 7</span>
+  <span class="eyebrow qn">Pergunta</span>
   <h2>Qual é a sua função?</h2>
   <div class="opts">
    <button class="opt" data-v="Dono(a) ou gestor(a)" data-p="30"><span class="k">A</span>Dono(a) ou gestor(a)</button>
    <button class="opt" data-v="Governanta ou supervisor(a)" data-p="25"><span class="k">B</span>Governanta ou supervisor(a)</button>
-   <button class="opt" data-v="Trabalho na lavanderia" data-p="10"><span class="k">C</span>Trabalho na lavanderia</button>
+   <button class="opt" data-v="Equipe de lavagem" data-p="10"><span class="k">C</span>Trabalho na lavagem</button>
    <button class="opt" data-v="Outra função" data-p="5"><span class="k">D</span>Outra função</button>
   </div>
  </section>
-
- <section class="step" data-step="q" data-key="porte">
-  <span class="eyebrow">Pergunta 3 de 7</span>
-  <h2>Quanto enxoval passa pela lavagem por dia?</h2>
-  <div class="opts">
-   <button class="opt" data-v="Até 30 kg por dia" data-p="5"><span class="k">A</span>Até 30 kg (até uns 10 quartos)</button>
-   <button class="opt" data-v="30 a 150 kg por dia" data-p="15"><span class="k">B</span>De 30 a 150 kg</button>
-   <button class="opt" data-v="Mais de 150 kg por dia" data-p="20"><span class="k">C</span>Mais de 150 kg</button>
-   <button class="opt" data-v="Não sei" data-p="5"><span class="k">D</span>Não sei dizer</button>
-  </div>
- </section>
-
  <section class="step" data-step="q" data-key="mancha">
-  <span class="eyebrow">Pergunta 4 de 7</span>
+  <span class="eyebrow qn">Pergunta</span>
   <h2>Qual mancha mais dá trabalho hoje?</h2>
   <div class="opts">
    <button class="opt" data-v="Protetor solar e maquiagem" data-p="0"><span class="k">A</span>Protetor solar e maquiagem</button>
@@ -139,9 +200,8 @@ p{margin:0}
    <button class="opt" data-v="Todas essas" data-p="0"><span class="k">D</span>Um pouco de todas</button>
   </div>
  </section>
-
  <section class="step" data-step="q" data-key="destino_peca">
-  <span class="eyebrow">Pergunta 5 de 7</span>
+  <span class="eyebrow qn">Pergunta</span>
   <h2>Quando a mancha não sai, o que acontece com a peça?</h2>
   <div class="opts">
    <button class="opt" data-v="Relava várias vezes" data-p="0"><span class="k">A</span>A gente relava várias vezes</button>
@@ -150,9 +210,8 @@ p{margin:0}
    <button class="opt" data-v="Compra enxoval novo em cima da hora" data-p="0"><span class="k">D</span>Compro enxoval novo em cima da hora</button>
   </div>
  </section>
-
  <section class="step" data-step="q" data-key="trocou_produto">
-  <span class="eyebrow">Pergunta 6 de 7</span>
+  <span class="eyebrow qn">Pergunta</span>
   <h2>Você já trocou de produto ou de fornecedor tentando resolver?</h2>
   <div class="opts">
    <button class="opt" data-v="Sim, mais de uma vez" data-p="0"><span class="k">A</span>Sim, mais de uma vez</button>
@@ -160,9 +219,8 @@ p{margin:0}
    <button class="opt" data-v="Ainda não, mas já pensei" data-p="0"><span class="k">C</span>Ainda não, mas já pensei nisso</button>
   </div>
  </section>
-
  <section class="step" data-step="q" data-key="urgencia">
-  <span class="eyebrow">Pergunta 7 de 7</span>
+  <span class="eyebrow qn">Pergunta</span>
   <h2>O quanto é importante resolver isso antes da alta temporada?</h2>
   <div class="opts">
    <button class="opt" data-v="Muito, preciso resolver já" data-p="10"><span class="k">A</span>Muito. Preciso resolver já</button>
@@ -223,16 +281,19 @@ p{margin:0}
   var qs=new URLSearchParams(location.search);
   var R={}, P=0, steps=[].slice.call(document.querySelectorAll('.step')), i=0;
   var px=function(){ try{ fbq.apply(null,arguments); }catch(e){} };
-  function show(n){ steps[i].classList.remove('on'); i=n; steps[i].classList.add('on');
-    document.getElementById('prog').style.width=Math.round(i/(steps.length-1)*100)+'%'; window.scrollTo(0,0);
-    var b=steps[i].querySelector('.opt, input'); if(b && steps[i].dataset.step!=='contato') try{b.focus({preventScroll:true});}catch(e){} }
-  document.getElementById('comecar').addEventListener('click',function(){ px('trackCustom','QuizInicio'); show(1); });
+  function ok(st){ var c=st.dataset.if; if(!c) return true; var kv=c.split('='); return R[kv[0]]===kv[1]; }
+  function next(from){ var n=from+1; while(n<steps.length && steps[n].dataset.step==='q' && !ok(steps[n])) n++; return n; }
+  var nq=0;
+  function show(n){ steps[i].classList.remove('on'); i=n; var st=steps[i]; st.classList.add('on');
+    if(st.dataset.step==='q'){ nq++; var e=st.querySelector('.qn'); if(e) e.textContent='Pergunta '+nq; }
+    document.getElementById('prog').style.width=Math.min(100,Math.round(i/(steps.length-1)*100))+'%'; window.scrollTo(0,0); }
+  document.getElementById('comecar').addEventListener('click',function(){ px('trackCustom','QuizInicio'); show(next(0)); });
   steps.forEach(function(s,idx){ if(s.dataset.step!=='q') return;
     s.querySelectorAll('.opt').forEach(function(o){ o.type='button'; o.addEventListener('click',function(){
       R[s.dataset.key]=o.dataset.v; R['p_'+s.dataset.key]=+o.dataset.p||0;
       px('trackCustom','QuizResposta',{pergunta:s.dataset.key,resposta:o.dataset.v});
-      show(idx+1); }); }); });
-  function score(){ return ['segmento','cargo','porte','urgencia'].reduce(function(a,k){return a+(R['p_'+k]||0);},0); }
+      show(next(idx)); }); }); });
+  function score(){ return ['segmento','tipo_lavanderia','maquinas','porte','cargo','urgencia'].reduce(function(a,k){return a+(R['p_'+k]||0);},0); }
   function digits(s){ return (s||'').replace(/\D/g,''); }
   document.getElementById('form').addEventListener('submit',function(e){
     e.preventDefault();
@@ -241,16 +302,23 @@ p{margin:0}
     if(w.length<10||w.length>13){ err.textContent='Confira o WhatsApp com DDD, por exemplo (71) 99999-9999.'; return; }
     err.textContent='';
     var ph = w.length<=11 ? '55'+w : w;
-    P=score(); var qual = P>=75 && R.p_segmento>=35 && R.p_cargo>=25;
-    var dados={nome:nome,whatsapp:ph,segmento:R.segmento,cargo:R.cargo,porte:R.porte,mancha:R.mancha,destino_peca:R.destino_peca,trocou_produto:R.trocou_produto,urgencia:R.urgencia,qualificado:qual,pontos:P,
+    P=score();
+    /* perfil ideal: hotel/pousada, lavanderia ou hospital + quem decide (dono, gestor, governanta) + porte médio ou maior */
+    var decisor=(R.p_cargo||0)>=25, segOk=(R.p_segmento||0)>=35, porteOk=(R.p_porte||0)>=15;
+    var nivel = (segOk&&decisor&&porteOk&&P>=90)?'A':((segOk&&decisor&&P>=75)?'B':'C');
+    var qual = nivel!=='C';
+    var dados={nome:nome,whatsapp:ph,segmento:R.segmento,tipo_lavanderia:R.tipo_lavanderia||null,maquinas:R.maquinas||null,cargo:R.cargo,porte:R.porte,mancha:R.mancha,destino_peca:R.destino_peca,trocou_produto:R.trocou_produto,urgencia:R.urgencia,qualificado:qual,nivel:nivel,pontos:P,
       utm_source:qs.get('utm_source'),utm_medium:qs.get('utm_medium'),utm_campaign:qs.get('utm_campaign'),utm_content:qs.get('utm_content'),utm_term:qs.get('utm_term'),fbclid:qs.get('fbclid'),pagina:location.pathname};
     try{ fetch(SB,{method:'POST',headers:{'apikey':KEY,'Authorization':'Bearer '+KEY,'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify(dados),keepalive:true}); }catch(x){}
-    /* Meta: correspondência avançada (o pixel faz o hash) + Lead para todos + LeadQualificado para o perfil ideal */
+    /* Meta: correspondência avançada (o pixel faz o hash), Lead com valor por nível (para otimizar por valor),
+       LeadQualificado para A e B e LeadNivelA para o lead perfeito. Os parâmetros ficam disponíveis para conversões personalizadas. */
     px('init','1608967560405738',{ph:ph,fn:nome.toLowerCase().split(' ')[0],country:'br'});
-    var info={content_name:'Diagnostico Manchas',segmento:R.segmento,cargo:R.cargo,porte:R.porte,mancha:R.mancha,pontos:P,qualificado:qual?'sim':'nao'};
+    var VAL={A:150,B:80,C:15};
+    var info={content_name:'Diagnostico Manchas',content_category:R.segmento,segmento:R.segmento,tipo_lavanderia:R.tipo_lavanderia||'',maquinas:R.maquinas||'',porte:R.porte,cargo:R.cargo,mancha:R.mancha,urgencia:R.urgencia,pontos:P,nivel:nivel,qualificado:qual?'sim':'nao',value:VAL[nivel],currency:'BRL'};
     px('track','Lead',info);
     if(qual) px('trackCustom','LeadQualificado',info);
-    try{ sessionStorage.setItem('spuma_diag',JSON.stringify({nome:nome,seg:R.segmento,mancha:R.mancha})); }catch(x){}
+    if(nivel==='A') px('trackCustom','LeadNivelA',info);
+    try{ sessionStorage.setItem('spuma_diag',JSON.stringify({nome:nome,seg:R.segmento,mancha:R.mancha,nivel:nivel})); }catch(x){}
     show(i+1); analisar(nome);
   });
   function analisar(nome){
@@ -265,7 +333,7 @@ p{margin:0}
   };
   function diag(nome){
     document.getElementById('dTitulo').textContent=nome.split(' ')[0]+', seu diagnóstico está pronto';
-    document.getElementById('dSeg').textContent=R.segmento||'';
+    document.getElementById('dSeg').textContent=[R.segmento,R.tipo_lavanderia,R.porte].filter(Boolean).join(' · ');
     document.getElementById('dMancha').textContent=R.mancha||'';
     document.getElementById('dDestino').textContent=R.destino_peca||'';
     document.getElementById('dTrocou').textContent = /^Sim/.test(R.trocou_produto||'') ? 'Você já trocou de produto e a mancha continuou, o que confirma isso.' : 'Trocar de produto, sozinho, não resolve.';
